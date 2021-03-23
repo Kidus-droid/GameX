@@ -17,7 +17,7 @@ function jump() {
 
 let isAlive
 function launch() {
-    isAlive = setInterval(() => {
+     isAlive = setInterval(() => {
         counter++
         title.innerHTML = counter
 
@@ -27,6 +27,7 @@ function launch() {
         //dectect collision
         if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 140) {
             console.log('Collision')
+            console.log('test')
             cactus.classList.remove('move_left')
             cactus.style.left = 50 + 'px'
             title.innerHTML = 'Game Over!\nYour score is: ' + counter
@@ -36,6 +37,9 @@ function launch() {
 
     }, 10);
 }
+//thic commment from kidus
+
+//thic commment from kidus
 
 document.addEventListener('keydown', function (event) {
     clearInterval(isAlive)
